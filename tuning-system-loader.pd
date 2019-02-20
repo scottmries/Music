@@ -1,0 +1,18 @@
+#N canvas 0 0 718 877 10;
+#X declare -stdpath ~/Documents/Pd;
+#X msg 60 132 load ~/Documents/Pd/TuningSystemExternal/tuning-system.lua
+;
+#X obj 61 91 loadbang;
+#X obj 64 178 pdlua;
+#X obj 165 61 declare -stdpath ~/Documents/Pd;
+#X msg 144 101 octave 1 \, octave 2;
+#X floatatom 139 175 5 0 0 0 - - -, f 5;
+#X obj 149 292 osc~;
+#X obj 199 182 tuningSystem;
+#X obj 241 287 print;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 4 0 7 0;
+#X connect 5 0 7 0;
+#X connect 7 0 6 0;
+#X connect 7 0 8 0;

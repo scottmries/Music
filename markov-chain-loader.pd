@@ -1,0 +1,12 @@
+#N canvas 119 342 450 300 10;
+#X declare -stdpath ~/Documents/Pd;
+#X obj 18 149 pdlua;
+#X obj 196 127 declare -stdpath ~/Documents/Pd;
+#X obj 129 234 pdluax markovChain;
+#X msg 24 87 load ~/Documents/Pd/MarkovChainExternal/markovChain.lua
+;
+#X obj 174 183 markovChain;
+#X obj 157 138 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 3 0 0 0;
+#X connect 5 0 4 0;
